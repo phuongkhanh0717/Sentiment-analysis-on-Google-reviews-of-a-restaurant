@@ -3,7 +3,10 @@
 ## Introduction
 In this project, we created a deep learning model using Recurrent Neural Networks (RNN) to classify restaurant reviews as either positive or negative. This task is important because it helps restaurant owners and managers better understand their customers' experiences, develop recommendation systems, improve customer satisfaction, and conduct competitive analysis. Our goal is to build an accurate tool for analyzing sentiment in restaurant reviews using RNNs, which can be useful for decision-making and enhancing customer experiences in real-world scenarios.
 
-## Model Figure
+## Model
+We are going to use PyTorch, which provides variations of recurrent neural network modules.
+From _Review on methods to fix number of hidden neurons in neural networks. Mathematical Problems in Engineering_, by Sheela and Deepa (2013), the number of neurons can be calculated in a hidden layer is (4*n^2+3)/(n^2-8), where n is the number of input.
+### Model Figure
 ![pretrained GloVe to an RNN-based architecture for sentiment analysis](https://user-images.githubusercontent.com/37010080/234146921-36006957-0201-4892-86c8-6d79b344802e.png)
 [Source](https://d2l.ai/chapter_natural-language-processing-applications/sentiment-analysis-rnn.html)
 
@@ -54,3 +57,6 @@ To address these ethical considerations, it is essential to continuously evaluat
 
 # Author
 - Khanh Vo
+
+# Reference
+- Sheela, K. G., & Deepa, S. N. (2013). Review on methods to fix number of hidden neurons in neural networks. Mathematical Problems in Engineering, 2013.
