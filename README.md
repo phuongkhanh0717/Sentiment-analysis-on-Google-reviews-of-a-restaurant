@@ -56,7 +56,7 @@ While developing and deploying our sentiment analysis model, it is crucial to co
 To address these ethical considerations, it is essential to continuously evaluate the model's performance, actively work on reducing biases in the training data, maintain transparency about the model's limitations, and develop guidelines for responsible use of the sentiment analysis system.
 
 # Author
-- Khanh Vo
+- Khanh Vo: Collecting the necessary data, preprocessing the data to make it usable for machine learning models, building the models, and writing the README report to document my work.
 
 # Reference
 - Sheela, K. G., & Deepa, S. N. (2013). Review on methods to fix number of hidden neurons in neural networks. Mathematical Problems in Engineering, 2013.
