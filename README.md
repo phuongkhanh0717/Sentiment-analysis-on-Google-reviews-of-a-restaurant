@@ -21,7 +21,7 @@ In this project, we focus our analysis specifically on the reviews of a single r
 
 ## Data Summary
 The dataset obtained from ExportComments.com provided valuable insights into the reviews of Sansotei Ramen at Square One. The key data summary points are as follows:
-- Total number of reviews:
+- Total number of reviews: 804
 - There are 363 reviews with only rating, no content. We have decided to manually remove them with Excel and classify the rest of reviews as positive if the rating is greater than or equal to 3, and negative if it's less than 3. Based on this classification, there are:
     - 358 positive reviews (81%). An example of positive review:
     
