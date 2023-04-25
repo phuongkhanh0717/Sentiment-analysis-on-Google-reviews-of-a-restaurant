@@ -26,6 +26,18 @@ The dataset obtained from ExportComments.com provided valuable insights into the
 |------|----|------|-------------|------|
 |Kevin Chow|08/07/18|1|2|Will not come back. Bad service / management and really slow kitchen (you can watch through the window yourself). Longer than usual wait times made worse by bad line management (came Sunday around 2pm). The experience ruined what otherwise was an okay ramen bowl, slightly too salty though. Stick to the ramen places in the east end / downtown, this place isn't up to par with the others. Am dissapointed that there is still no great ramen place in sauga. Problems may be due to new staff, but no management seemed to be present trying to run the business as it should for a new place. Also they don't have the proper soup takeout containers for noodles (isn't this a noodle place?!?)... only had small styrofoam boxes.|
 
+## Data Transformation
+To prepare the dataset for training the RNN model, we performed the following data transformation steps:
+1.	Labeling: Assign binary labels to the reviews based on the given ratings. If the rating is greater than or equal to 3, it is considered a positive review (label 1), otherwise, it is a negative review (label 0).
+2.	Text Preprocessing:
+    - Convert all text to lowercase.
+    - Tokenize the reviews into words.
+    - Remove stopwords (common words like 'the', 'and') and special characters (common like ',', '.', ';', ':').
+3.  Embedding: Convert the tokenized words into dense vectors using pre-trained word embeddings. We used GLoVe (Global Vectors for Word Representation), a popular unsupervised learning algorithm, to generate the word embeddings. GLoVe maps words to vectors in a continuous space based on the co-occurrence statistics of the words in a large corpus of text. By using pre-trained word embeddings, we can capture the semantic meaning of the words and improve the performance of our model.
+4.	Encoding: Convert the tokenized words into numerical values (word indices) using a word-to-index mapping. This step creates an integer-encoded representation of the reviews.
+5.	Padding: Ensure that all sequences (reviews) have the same length by padding shorter sequences with zeros or truncating longer sequences. This creates a fixed-size input for the model.
+6.	Dataset Split: Split the preprocessed dataset into training, validation, and testing sets. A common split ratio is 60% for training, 20% for validation, and 20% for testing. This allows us to train the model, fine-tune hyperparameters, and evaluate the model's performance on unseen data.
+Once the data is transformed, it can be used to train the RNN model for sentiment classification.
 # Ethical Consideration
 While developing and deploying our sentiment analysis model, it is crucial to consider the potential ethical issues that may arise due to its use. Here, we discuss some concerns related to the system, the limitations of the model, and the training data:
 1.	Misinterpretation of Sentiment: There is a potential ethical concern in our project that the deep learning model may classify the sentiment of a review incorrectly, which could result in an inaccurate representation of the restaurant's performance. This misclassification could potentially harm the restaurant's reputation or misguide users into making decisions based on misleading information.
