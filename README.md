@@ -12,6 +12,16 @@ From _Review on methods to fix number of hidden neurons in neural networks. Math
 
 ![RNN Architecture](https://user-images.githubusercontent.com/37010080/234147022-3c38ea5b-9780-4d9c-a12c-4f5e870c067b.png)
 [Source](https://www.mdpi.com/2076-3417/12/7/3641)
+
+### Model Example
+- One of the reviews the model classifies right is "This cozy restaurant seats about 35 guests.", with 4 stars rating. Based on our decision, this review is positive (label = 1) and the model got it correct:
+
+![True Prediction](https://github.com/phuongkhanh0717/Sentiment-analysis-on-Google-reviews-of-a-restaurant/blob/main/T_Prediction.png)
+
+- One of the reviews the model classifies wrong is "Very nice decor with parking lot in front (Entrance no. 9). Great value too! One of my favourite ramen restaurants.", with 5 stars rating. Based on our decision, this review is positive (label = 1). However, the model classifies it to be negative (label = 0):
+
+![False Prediction](https://github.com/phuongkhanh0717/Sentiment-analysis-on-Google-reviews-of-a-restaurant/blob/main/F_Prediction.png)
+
 ## Data
 ### Data Source
 In this project, we focus our analysis specifically on the reviews of a single restaurant, Sansotei Ramen at Square One (Mississauga, Canada). To collect the review data, we used the following approach:
