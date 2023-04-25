@@ -14,13 +14,11 @@ From _Review on methods to fix number of hidden neurons in neural networks. Math
 [Source](https://www.mdpi.com/2076-3417/12/7/3641)
 
 ### Model Example
-- One of the reviews the model classifies right is "This cozy restaurant seats about 35 guests.", with 4 stars rating. Based on our decision, this review is positive (label = 1) and the model got it correct:
+- One of the reviews the model classifies right is "Good service, but the broth was quite salty, and the meat had a weird taste, I’m not sure if that’s the style of the restaurant, but I’m not really a fan.", with 2 stars rating. Based on our decision on the rating, this review is negative (label = 0) and the model got it correct.
 
-![True Prediction](https://github.com/phuongkhanh0717/Sentiment-analysis-on-Google-reviews-of-a-restaurant/blob/main/T_Prediction.png)
+- One of the reviews the model classifies wrong is "The soup was a bit saltier than we had expected. Will probably come back after things have settled down and they have their official grand opening.", with 3 stars rating. Based on our decision, this review is positive (label = 1). However, the model classifies it to be negative (label = 0):
 
-- One of the reviews the model classifies wrong is "Very nice decor with parking lot in front (Entrance no. 9). Great value too! One of my favourite ramen restaurants.", with 5 stars rating. Based on our decision, this review is positive (label = 1). However, the model classifies it to be negative (label = 0):
-
-![False Prediction](https://github.com/phuongkhanh0717/Sentiment-analysis-on-Google-reviews-of-a-restaurant/blob/main/F_Prediction.png)
+![Prediction](https://github.com/phuongkhanh0717/Sentiment-analysis-on-Google-reviews-of-a-restaurant/blob/main/Prediction%20-%20Model%20Example.png)
 
 ## Data
 ### Data Source
@@ -57,6 +55,7 @@ To prepare the dataset for training the RNN model, we performed the following da
 5.	Padding: Ensure that all sequences (reviews) have the same length by padding shorter sequences with zeros or truncating longer sequences. This creates a fixed-size input for the model.
 6.	Dataset Split: Split the preprocessed dataset into training, validation, and testing sets. A common split ratio is 60% for training, 20% for validation, and 20% for testing. This allows us to train the model, fine-tune hyperparameters, and evaluate the model's performance on unseen data.
 Once the data is transformed, it can be used to train the RNN model for sentiment classification.
+
 # Ethical Consideration
 While developing and deploying our sentiment analysis model, it is crucial to consider the potential ethical issues that may arise due to its use. Here, we discuss some concerns related to the system, the limitations of the model, and the training data:
 1.	Misinterpretation of Sentiment: There is a potential ethical concern in our project that the deep learning model may classify the sentiment of a review incorrectly, which could result in an inaccurate representation of the restaurant's performance. This misclassification could potentially harm the restaurant's reputation or misguide users into making decisions based on misleading information.
